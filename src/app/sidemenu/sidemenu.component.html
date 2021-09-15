@@ -1,0 +1,40 @@
+
+
+   <nz-layout>
+    <nz-header>
+      <div class="logo"></div>
+      <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+      </ul>
+    </nz-header>
+    <nz-layout>
+      <nz-sider nzWidth="200px" nzTheme="light">
+        <ul nz-menu nzMode="inline" class="sider-menu">
+          <li nz-submenu nzOpen nzIcon="user" nzTitle="Company">
+            <ul>
+              <li nz-menu-item nzSelected>
+                <a [routerLink]="['/app/company']" class="nav-item">
+                  <i nz-icon nzType="user" nzTheme="outline"></i> Company
+                </a>
+              </li>
+              <li nz-menu-item nzSelected>
+                <a [routerLink]="['/app/company-list']" class="nav-item">
+                  <i nz-icon nzType="usergroup-add" nzTheme="outline"></i> Company List
+                </a>
+              </li>
+              <li nz-menu-item nzSelected>
+                <a [routerLink]="['/app/excell']" class="nav-item">
+                  <i nz-icon nzType="file-excel" nzTheme="outline"></i> Excell Sheet
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nz-sider>
+      <nz-layout class="inner-layout">
+        <nz-breadcrumb>
+        </nz-breadcrumb>
+        <nz-content><router-outlet></router-outlet></nz-content>
+      </nz-layout>
+    </nz-layout>
+  </nz-layout>

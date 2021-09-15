@@ -1,0 +1,108 @@
+<form [formGroup]="companyFormGroup" (submit)="saveForm()">
+    <div class="breadcrumb-actions" style="display: flex; flex-direction: row-reverse;">
+      <nz-breadcrumb>
+        <!-- <nz-breadcrumb-item>
+          <a [routerLink]="['/app/company-list']">Company List</a>
+        </nz-breadcrumb-item> -->
+        <nz-breadcrumb-item>
+          <!-- {{isEditing ? 'Update' : 'Add User'}} -->
+        </nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="actions">
+        <button type="button"  nz-button nzType="default">Cancel</button>
+        <button type="submit" nz-button nzType="primary">Save</button>
+  
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="inline">
+        <nz-form-item>
+          <div class="label-input">
+            <label>Company Name</label>
+            <nz-form-control>
+                <nz-input-group>
+                  <input type="text" nz-input formControlName="companyName" placeholder="Company Name" />
+                </nz-input-group>
+              </nz-form-control>
+          </div>
+        </nz-form-item>
+        <nz-form-item>
+          <div class="label-input">
+            <label>Email</label>
+            <nz-form-control>
+              <nz-input-group>
+                <input type="text" nz-input formControlName="email" placeholder="Email Address" />
+              </nz-input-group>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+      </div>
+
+
+      <div class="inline">
+        <nz-form-item>
+          <div class="label-input">
+            <label>Longitude</label>
+            <nz-form-control>
+              <nz-input-group>
+                <input type="text" nz-input formControlName="longitude" nzAllowClear placeholder="Longitude" />
+              </nz-input-group>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+
+        <nz-form-item>
+            <div class="label-input">
+              <label>Latitude</label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input type="text" nz-input formControlName="latitude" nzAllowClear placeholder="Latitude" />
+                </nz-input-group>
+              </nz-form-control>
+            </div>
+          </nz-form-item>
+  
+      </div>
+  
+      <div class="inline">
+        <nz-form-item>
+          <div class="label-input">
+            <label>Phone</label>
+            <nz-form-control>
+              <nz-input-group>
+                <input type="text" nz-input formControlName="phone" nzAllowClear placeholder="+92-0000000" />
+              </nz-input-group>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+        <nz-form-item>
+            <div class="label-input">
+              <label>Status</label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input type="text" nz-input formControlName="status" nzAllowClear placeholder="Status" />
+                </nz-input-group>
+              </nz-form-control>
+            </div>
+          </nz-form-item>
+        
+  
+  
+
+  
+      </div>
+      <div class="inline-last">
+        <nz-form-item>
+            <div class="label-input">
+              <label>Address</label>
+              <nz-form-control>
+                <nz-input-group>
+                  <input type="text" nz-input formControlName="address" nzAllowClear placeholder="Address" />
+                </nz-input-group>
+              </nz-form-control>
+            </div>
+          </nz-form-item>
+      </div>
+ 
+    </div>
+  </form>

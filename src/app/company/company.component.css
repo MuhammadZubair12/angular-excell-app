@@ -1,0 +1,31 @@
+/* @import "colors";
+@import "base"; */
+/* :host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  } */
+  i {
+    cursor: pointer;
+  }
+
+  .inline {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .inline-last {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+  }
+
+  input {
+      width: 400px !important;
+  }
+  
+  .actions {
+      margin-right: 6% !important;
+  }

@@ -1,0 +1,6 @@
+.right{
+    display: flex;
+    justify-content: flex-end;
+    /* width:150px; */
+    margin-left: 10px;
+}
