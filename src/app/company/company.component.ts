@@ -18,7 +18,7 @@ export class CompanyComponent implements OnInit {
     private message:NzMessageService
   ) { }
   saveForm(): any {
-    
+    console.log('Record', this.companyFormGroup.value);
   }
 
   ngOnInit(): void {
