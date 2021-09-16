@@ -12,6 +12,6 @@ export class ExcellSheetService {
    }
 
   createUser(user: any){
-    return this.http.post("http://localhost:3000/public/api/v1/sheet", user)
+    return this.http.post("https://node-excel-app.herokuapp.com/public/sheet", user)
   }
 }
