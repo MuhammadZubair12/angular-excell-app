@@ -22,6 +22,7 @@ const routes: Routes = [
     children: [
       {path:'excell', component: ExcellSheetComponent},
       {path:'company', component: CompanyComponent},
+      {path:'company/:id', component: CompanyComponent},
       {path:'company-list', component: CompanyListComponent},
     ]
   },

@@ -10,7 +10,8 @@
       </nz-breadcrumb>
       <div class="actions">
         <button type="button"  nz-button nzType="default">Cancel</button>
-        <button type="submit" nz-button nzType="primary">Save</button>
+        <button *ngIf="isEdit == false" type="submit" nz-button nzType="primary">Save</button>
+        <button *ngIf="isEdit == true" type="submit" nz-button nzType="primary">Update</button>
   
       </div>
     </div>
@@ -21,7 +22,7 @@
             <label>Company Name</label>
             <nz-form-control>
                 <nz-input-group>
-                  <input type="text" nz-input formControlName="companyName" placeholder="Company Name" />
+                  <input type="text" nz-input formControlName="company_name" placeholder="Company Name" />
                 </nz-input-group>
               </nz-form-control>
           </div>
@@ -70,7 +71,7 @@
             <label>Phone</label>
             <nz-form-control>
               <nz-input-group>
-                <input type="text" nz-input formControlName="phone" nzAllowClear placeholder="+92-0000000" />
+                <input type="text" nz-input formControlName="phone_number" nzAllowClear placeholder="+92-0000000" />
               </nz-input-group>
             </nz-form-control>
           </div>

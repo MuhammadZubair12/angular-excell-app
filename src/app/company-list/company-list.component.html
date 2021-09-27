@@ -14,7 +14,6 @@
         <th>Email</th>
         <th>Longitude</th>
         <th>Latitude</th>
-        <th>Address</th>
         <th>Phone Number</th>
         <th>Status</th>
         <th>Edit</th>
@@ -23,13 +22,15 @@
     <tbody>
       <!-- <tr *ngFor="let data of currencyTable.data; let i = index;"> -->
       <tr *ngFor="let data of Record;let i = index;">
-        <!-- <td>{{i+1}}</td>
-        <td>{{data.firstName}}</td>
-        <td>{{data.lastName}}</td>
+        <td>{{i+1}}</td>
+        <td>{{data.company_name}}</td>
         <td>{{data.email}}</td>
-        <td>{{data.RoleId}}</td> -->
+        <td>{{data.longitude}}</td>
+        <td>{{data.latitude}}</td>
+        <td>{{data.phone_number}}</td>
+        <td>{{data.status}}</td>
         <td>
-          <!-- <a [routerLink]="['/app/accounting/edit-user']" (click)="editUser(data.id)">Edit</a> -->
+          <a [routerLink]="['/app/company']" (click)="editCompany(data.id)">Edit</a>
         </td>
 
 
