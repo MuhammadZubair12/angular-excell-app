@@ -26,22 +26,23 @@ export interface UserList {
   providedIn: 'root'
 })
 export class CompanyService {
+  url = "https://final-nodes-app.herokuapp.com";
 
   constructor(private http: HttpClient) { }
 
   createCompany(data: any){
-    return this.http.post("https://final-nodes-app.herokuapp.com/public/company", data)
+    return this.http.post(`${this.url}/public/company`, data)
   }
 
   getCompany(){
-    return this.http.get("https://final-nodes-app.herokuapp.com/public/getCompany")
+    return this.http.get(`${this.url}/public/getCompany`)
   }
 
   updateCompany(id: any, data: any) {
-    return this.http.put(`https://final-nodes-app.herokuapp.com/public/updatecompany/${id}`,data);
+    return this.http.put(`${this.url}/public/updatecompany/${id}`,data);
   }
 
   getCompanyById(id:number) {
-    return this.http.get(`https://final-nodes-app.herokuapp.com/public/getCompanyById/${id}`);
+    return this.http.get(`${this.url}/public/getCompanyById/${id}`);
   }
 }
