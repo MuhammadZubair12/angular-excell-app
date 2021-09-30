@@ -22,6 +22,12 @@
     margin-left: 6%;
   }
 
+  .inline-map {
+    display: flex;
+    margin-left: 6.2%;
+  }
+
+
   input {
       width: 400px !important;
   }
@@ -29,3 +35,12 @@
   .actions {
       margin-right: 6% !important;
   }
+
+  agm-map {
+    height: 300px;
+}
+
+.location {
+  border-color: #efefef45 !important;
+  height: 33px !important;
+}

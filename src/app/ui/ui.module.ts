@@ -23,12 +23,13 @@ import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 
 const modules = [
   CommonModule,
   NzMenuModule,
   NzIconModule,
+  NzSwitchModule,
   NzInputModule,
   NzButtonModule,
   NzTreeModule,

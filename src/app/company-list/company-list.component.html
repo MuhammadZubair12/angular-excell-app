@@ -5,7 +5,7 @@
     Company</a>
 </div><br>
 <div class="detail-container">
-  <nz-table nzSize="small" 
+  <nz-table nzSize="small" #basicTable [nzData]="Record" 
  >
     <thead>
       <tr>
@@ -15,20 +15,18 @@
         <th>Longitude</th>
         <th>Latitude</th>
         <th>Phone Number</th>
-        <th>Status</th>
         <th>Edit</th>
       </tr>
     </thead>
     <tbody>
       <!-- <tr *ngFor="let data of currencyTable.data; let i = index;"> -->
-      <tr *ngFor="let data of Record;let i = index;">
+      <tr *ngFor="let data of basicTable.data;let i = index;">
         <td>{{i+1}}</td>
         <td>{{data.company_name}}</td>
         <td>{{data.email}}</td>
         <td>{{data.longitude}}</td>
         <td>{{data.latitude}}</td>
         <td>{{data.phone_number}}</td>
-        <td>{{data.status}}</td>
         <td>
           <a [routerLink]="['/app/company']" (click)="editCompany(data.id)">Edit</a>
         </td>

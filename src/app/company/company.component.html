@@ -9,7 +9,7 @@
         </nz-breadcrumb-item>
       </nz-breadcrumb>
       <div class="actions">
-        <button type="button"  nz-button nzType="default">Cancel</button>
+        <button type="button"  nz-button nzType="default" (click)="cancel()">Cancel</button>
         <button *ngIf="isEdit == false" type="submit" nz-button nzType="primary">Save</button>
         <button *ngIf="isEdit == true" type="submit" nz-button nzType="primary">Update</button>
   
@@ -38,32 +38,6 @@
           </div>
         </nz-form-item>
       </div>
-
-
-      <div class="inline">
-        <nz-form-item>
-          <div class="label-input">
-            <label>Longitude</label>
-            <nz-form-control>
-              <nz-input-group>
-                <input type="text" nz-input formControlName="longitude" nzAllowClear placeholder="Longitude" />
-              </nz-input-group>
-            </nz-form-control>
-          </div>
-        </nz-form-item>
-
-        <nz-form-item>
-            <div class="label-input">
-              <label>Latitude</label>
-              <nz-form-control>
-                <nz-input-group>
-                  <input type="text" nz-input formControlName="latitude" nzAllowClear placeholder="Latitude" />
-                </nz-input-group>
-              </nz-form-control>
-            </div>
-          </nz-form-item>
-  
-      </div>
   
       <div class="inline">
         <nz-form-item>
@@ -77,33 +51,60 @@
           </div>
         </nz-form-item>
         <nz-form-item>
-            <div class="label-input">
-              <label>Status</label>
-              <nz-form-control>
-                <nz-input-group>
-                  <input type="text" nz-input formControlName="status" nzAllowClear placeholder="Status" />
-                </nz-input-group>
-              </nz-form-control>
-            </div>
-          </nz-form-item>
-        
-  
-  
-
-  
+          <div class="label-input">
+            <label>Address</label>
+            <nz-form-control>
+              <input class="location" formControlName="address" placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+              #search
+              [(ngModel)]="searchControl"
+              />
+             <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" hidden>
+             <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker></agm-map>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
       </div>
-      <div class="inline-last">
+
+      <div class="inline">
+        <nz-form-item>
+          <div class="label-input">
+            <label>Longitude</label>
+            <nz-form-control>
+              <nz-input-group>
+                <input type="text" nz-input formControlName="longitude" value="{{longitude}}" [(ngModel)]="longitude" placeholder="Longitude" />
+              </nz-input-group>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+
         <nz-form-item>
             <div class="label-input">
-              <label>Address</label>
+              <label>Latitude</label>
               <nz-form-control>
                 <nz-input-group>
-                  <input type="text" nz-input formControlName="address" nzAllowClear placeholder="Address" />
+                  <input type="text" nz-input formControlName="latitude" value="{{latitude}}"[(ngModel)]="latitude" placeholder="Latitude" />
                 </nz-input-group>
               </nz-form-control>
             </div>
           </nz-form-item>
+  
       </div>
+
+      <div class="inline-status" style="margin-left: 6% !important;">
+        <nz-form-item>
+          <div class="label-input">
+            <label>Status</label>
+            <nz-form-control>
+              <nz-switch formControlName="status" nzCheckedChildern="Yes" nzUnCheckedChildern="No"></nz-switch>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+      </div>
+
+
+ 
  
     </div>
+    
   </form>
+

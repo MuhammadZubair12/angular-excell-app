@@ -1,5 +1,6 @@
 <div class="main">
     <input type="file" (change)="onFileChange($event)" multiple="false" />
+    <button nz-button nzType="primary" style="float: right;" (click)="saveData()" class="search-button">Save</button>
     <nz-table #nzTable [nzData]="data" nzTableLayout="fixed">
         <tbody>
             <tr *ngFor="let row of nzTable.data">
@@ -9,7 +10,5 @@
             </tr>
         </tbody>
       </nz-table>
-      <button nz-button nzType="primary" (click)="saveData()" class="search-button">Save</button>
-
 </div>
 

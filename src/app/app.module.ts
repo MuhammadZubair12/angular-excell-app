@@ -22,6 +22,8 @@ import { SharedModule } from './shared/shared.module';
 import { UIModule } from './ui/ui.module';
 import { CompanyListComponent } from './company-list/company-list.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -44,7 +46,11 @@ registerLocaleData(en);
     NzUploadModule,
     NzTableModule,
     SharedModule,
-    UIModule
+    UIModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBcG_aO4b4gYOe1Pu--a-eDfd8vgptuET0',
+      libraries: ['places']
+    })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
